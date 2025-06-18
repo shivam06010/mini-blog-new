@@ -6,6 +6,10 @@ import Header from "../components/header";
 export default function BlogDetailPage({ params }) {
   const blog = getBlog(params.blogSlug);
 
+  if (!blog) {
+    return <div>404 - Blog Not Found</div>;
+  }
+
   return (
     <>
       <Header />
