@@ -4,8 +4,8 @@ import { IoCloudUploadSharp } from "react-icons/io5";
 import { useRef, useState } from "react";
 import Image from "next/image";
 
-function ImagePicker({ name }) {
-  const [pickedImage, setPickedImage] = useState();
+function ImagePicker({ name, prevImage }) {
+  const [pickedImage, setPickedImage] = useState(prevImage);
   const imageInput = useRef();
 
   function handleImageChange(event) {
@@ -75,9 +75,8 @@ function ImagePicker({ name }) {
           </button>
         )}
       </div>
+
       <input
-        required
-        className="hidden"
         type="file"
         id={name}
         accept="image/png, image/jpeg"
@@ -85,6 +84,9 @@ function ImagePicker({ name }) {
         ref={imageInput}
         onChange={handleImageChange}
       />
+      {prevImage && (
+        <input type="hidden" name="existingImage" value={prevImage} />
+      )}
     </div>
   );
 }
