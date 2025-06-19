@@ -1,5 +1,5 @@
 import { getBlogs } from "@/lib/blogs";
-import BlogGrid from "./Blogs-grid";
+import BlogGrid from "../components/Blogs-grid";
 import TopBlog from "../components/top-blog";
 
 export default function BlogPage() {
@@ -42,7 +42,7 @@ export default function BlogPage() {
 
         <TopBlog blog={blogs[blogs.length - 1]} />
 
-        <BlogGrid blogs={blogs} />
+        <BlogGrid blogs={blogs.slice(0, blogs.length - 1)} />
       </div>
     </>
   );

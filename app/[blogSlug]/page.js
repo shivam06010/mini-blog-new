@@ -1,5 +1,5 @@
 import { getBlog } from "@/lib/blogs";
-import Image from "next/image";
+
 import Link from "next/link";
 import Header from "../components/header";
 

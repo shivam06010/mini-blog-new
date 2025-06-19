@@ -111,10 +111,6 @@ async function initData() {
          @description
       )
    `);
-
-  for (const blog of dummyBlogs) {
-    stmt.run(blog);
-  }
 }
 
 initData();

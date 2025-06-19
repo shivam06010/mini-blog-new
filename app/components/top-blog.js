@@ -18,7 +18,7 @@ export default function TopBlog({ blog }) {
 
         <p className="text-14px] mb-7 text-stone-400">
           {blog.description.length > 600
-            ? blog.description.slice(0, 580) + "...."
+            ? blog.description.slice(0, 560) + "...."
             : blog.description}
         </p>
 
