@@ -48,7 +48,7 @@ function ImagePicker({ name, prevImage, setImage }) {
         {!pickedImage && (
           <div className="flex justify-center items-center mt-10 gap-2 flex-col">
             <FiUpload size={40} className="text-[#9ba3af]" />
-            <p className="mt-2">Drag and drop or click to browse</p>
+            <p className="mt-2">click to browse</p>
             <p className="text-[12px] text-stone-400">
               JPEG, JPG, PNG up to 10MB
             </p>
