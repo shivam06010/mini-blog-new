@@ -25,14 +25,14 @@ export default function TopBlog({ blog }) {
       </div>
       <main className="px-3 py-3 xl:py-5 xl:pr-7 xl:grid xl:grid-rows-[50px_260px_50px]">
         <h1 className="text-[20px] mb-3 xl:mb-5 font-medium">
-          {blog.title.length > 105
-            ? blog.title.slice(0, 60) + "....."
+          {blog.title.length > 50
+            ? blog.title.slice(0, 50) + "....."
             : blog.title}
         </h1>
 
         <p className="text-[14px] xl:text-[16px] mb-4 leading-6 xl:leading-7 text-[#737373]">
-          {blog.description.length > 670
-            ? blog.description.slice(0, 670) + "...."
+          {blog.description.length > 630
+            ? blog.description.slice(0, 630) + "...."
             : blog.description}
         </p>
 

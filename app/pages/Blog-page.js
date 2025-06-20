@@ -1,13 +1,11 @@
-export const dynamic = "force-dynamic";
+
 
 import { getBlogs } from "@/lib/blogs";
 import BlogGrid from "../components/Blogs-grid";
 import TopBlog from "../components/top-blog";
 import NoBlogs from "../components/no-blogs";
 
-export default function BlogPage() {
-  const blogs = getBlogs();
-
+export default function BlogPage({ blogs }) {
   return (
     <>
       <style>{`

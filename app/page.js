@@ -1,6 +1,7 @@
-import Image from "next/image";
+export const dynamic = "force-dynamic";
 import Header from "./components/header";
 import BlogPage from "./pages/Blog-page";
+import { getBlogs } from "@/lib/blogs";
 
 export const metadata = {
   title: "Home",
@@ -8,11 +9,12 @@ export const metadata = {
 };
 
 export default function Home() {
+  const blogs = getBlogs();
   return (
     <div className="h-screen">
       <Header />
       <div className="bg-[#FBFCFE] ">
-        <BlogPage />
+        <BlogPage blogs={blogs} />
       </div>
     </div>
   );
