@@ -14,6 +14,7 @@ export default function DeleteBlogButton({ blog }) {
     );
     if (!confirm) return;
     await deleteBlog(blog);
+    router.push("/");
     router.refresh();
   }
 
