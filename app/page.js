@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="h-screen">
       <Header />
-      <div className="bg-[#FBFCFE] h-full">
+      <div className="bg-[#FBFCFE] ">
         <BlogPage />
       </div>
     </div>

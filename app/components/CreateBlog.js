@@ -5,14 +5,18 @@ import { useActionState } from "react";
 import ImagePicker from "./ImagePicker";
 import BlogFormSubmit from "./blog-form-submit";
 import FormCreateOrEdit from "./Form";
+import { MdOutlinePeopleAlt } from "react-icons/md";
 
 export default function CreateBlog() {
   // const [state, formAction] = useActionState(postBlog, { message: null });
 
   return (
-    <div className="max-w-[1200px] pt-8 px-10 mx-auto bg-white border-1 border-stone-100">
-      <h2 className="text-[20px] font-[200] mb-5">Create New Post</h2>
-      <p className="text-[14px] text-stone-400">
+    <div className="max-w-[1280px] px-3 pt-5 xl:pt-8 xl:px-10 mx-auto bg-white border-[0.5px] rounded-[6px] border-stone-300">
+      <h2 className="text-[20px] xl:text-[22px] flex gap-2 items-center font-[200] mb-3">
+        <MdOutlinePeopleAlt size={24} className="text-[#0057c5]" />
+        <span>Create New Blog</span>
+      </h2>
+      <p className="text-[16px] - text-stone-400">
         Start writing a new post — share your thoughts, stories, or updates with
         your readers
       </p>
@@ -42,7 +46,7 @@ export default function CreateBlog() {
         </div>
       </form> */}
 
-      <FormCreateOrEdit blog={null} />
+      <FormCreateOrEdit />
     </div>
   );
 }

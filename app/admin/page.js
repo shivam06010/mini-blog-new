@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { getBlogs } from "@/lib/blogs";
 import Header from "../components/header";
 import ManageAdminPage from "./manage-admin-page";

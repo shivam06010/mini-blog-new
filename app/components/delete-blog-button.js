@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 
 import { deleteBlog } from "@/lib/testing";
 import { MdDeleteOutline } from "react-icons/md";
+import { RiDeleteBinLine } from "react-icons/ri";
 
 export default function DeleteBlogButton({ blog }) {
   const router = useRouter();
@@ -19,9 +20,9 @@ export default function DeleteBlogButton({ blog }) {
   return (
     <button
       onClick={handleDelete}
-      className="px-2 py-2 border-1 cursor-pointer rounded-[6px] border-red-500"
+      className="px-3 py-[11px]  cursor-pointer rounded-[6px] border-red-500 border-[1px] "
     >
-      <MdDeleteOutline className="text-red-500" size={20} />
+      <RiDeleteBinLine className="text-red-500 " size={20} />
     </button>
   );
 }
